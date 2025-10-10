@@ -1,0 +1,38 @@
+@import url('https://fonts.googleapis.com/css2?family=Cardo:ital,wght@0,400;0,700;1,400&family=Fjalla+One&family=Kavivanar&family=Merienda:wght@300..900&family=Parkinsans&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Yellowtail&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
+/* product name and price front */
+.antonio{
+  font-family: "Fjalla One", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  /* font-style: normal; */
+}
+.product-font{
+  font-family: "Merienda", cursive;
+  font-optical-sizing: auto;
+  font-weight:500;
+  font-style: normal;
+}
+/* home-slider */
+.home-slider{
+  position: relative;
+  inset: 0;
+}
+.home-slider::before{
+  content: "";
+  position: absolute;
+  background: #0000008b;
+  height:100%;
+  width: 100%;
+}
+.home-slider:hover::before{
+   transform:rotate(360deg) translateX(-445px);
+   transition: all 1s;
+}
+.some-facts{
+  background:linear-gradient(to bottom, #181a1c6f, #34363a80) ,url("./assets/home/bg-shape-04.png");
+}
+.expert-worker img{
+  border-start-end-radius: 85px;
+}
