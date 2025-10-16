@@ -3,6 +3,8 @@ import { IoIosCall ,IoLogoInstagram} from "react-icons/io";
 import { MdOutlineMail } from "react-icons/md";
 import { TiSocialFacebook } from "react-icons/ti";
 import { CiTwitter } from "react-icons/ci";
+import logo from '../../assets/logo.png'
+import { Link } from 'react-router-dom';
 const Header = () => {
   const [menuOpen, setMenuOpen] = useState(false);
 
@@ -41,8 +43,9 @@ const Header = () => {
           {/* <!-- lg+ --> */}
           <nav className="flex items-center justify-between h-16 lg:h-20">
             <div className="flex-shrink-0">
-              <a href="#" title="" className="flex">
-                <img className="w-auto h-8 lg:h-10" src="https://cdn.rareblocks.xyz/collection/celebration/images/logo.svg" alt="" />
+              <a href="#" title="" className="flex items-center text-2xl font-bold text-blue-600 hover:text-blue-700 focus:text-blue-700" aria-label="Logo">
+                <img className="w-auto h-8 lg:h-10" src={logo} alt="" />
+                <span className='ms-3'>ASSOCIATES</span>
               </a>
             </div>
 
@@ -63,13 +66,24 @@ const Header = () => {
             </button>
 
             <div className="hidden lg:flex lg:items-center lg:ml-auto lg:space-x-10">
-              <a href="#" className="text-base font-medium text-black transition-all duration-200 hover:text-blue-600 focus:text-blue-600"> Home </a>
-              <a href="#" className="text-base font-medium text-black transition-all duration-200 hover:text-blue-600 focus:text-blue-600"> About </a>
-              <a href="#" className="text-base font-medium text-black transition-all duration-200 hover:text-blue-600 focus:text-blue-600"> Resources </a>
-              <a href="#" className="text-base font-medium text-black transition-all duration-200 hover:text-blue-600 focus:text-blue-600"> Pricing </a>
+              <Link to="/" className="text-base font-medium text-black transition-all duration-200 hover:text-blue-600 focus:text-blue-600"> Home </Link>
+              <Link to="/about" className="text-base font-medium text-black transition-all duration-200 hover:text-blue-600 focus:text-blue-600"> About </Link>
+                <div className="relative group">
+                <button className="text-base font-medium text-black transition-all duration-200 hover:text-blue-600 focus:text-blue-600 flex items-center">
+                  Services
+                  <svg className="ml-1 w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+                  </svg>
+                </button>
+                <div className="absolute -left-6 top-4 z-50 hidden mt-2 w-40 bg-white border border-gray-200 rounded shadow-lg group-hover:block">
+                  <Link to="/real-estate" className="block px-4 py-2 text-sm text-black hover:bg-blue-50">Real Estate Blog</Link>
+                  <Link to="/construction" className="block px-4 py-2 text-sm text-black hover:bg-blue-50">Construction</Link>
+                </div>
+                </div>
+              <Link to="/pricing" className="text-base font-medium text-black transition-all duration-200 hover:text-blue-600 focus:text-blue-600"> Pricing </Link>
             </div>
 
-            <a href="#" className="items-center justify-center hidden px-4 py-3 ml-10 text-base font-semibold text-white transition-all duration-200 bg-blue-600 border border-transparent rounded-md lg:inline-flex hover:bg-blue-700 focus:bg-blue-700" role="button"> Get started now </a>
+            <Link to="#" className="items-center justify-center hidden px-4 py-3 ml-10 text-base font-semibold text-white transition-all duration-200 bg-blue-600 border border-transparent rounded-md lg:inline-flex hover:bg-blue-700 focus:bg-blue-700" role="button"> Get started now </Link>
           </nav>
 
           {/* <!-- xs to lg --> */}

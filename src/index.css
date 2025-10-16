@@ -36,3 +36,109 @@
 .expert-worker img{
   border-start-end-radius: 85px;
 }
+.expert-worker{
+  background: url(./assets/home/bg-bg.png) no-repeat right/contain;
+}
+
+/* about-home-banner */
+.about-home-banner{
+  background: url(./assets/about/page-title.jpg) no-repeat center/cover;
+  height: 400px;
+}
+.project-completion{
+  background:linear-gradient(to right,#00000086,#0000009c), url(./assets/about/construction-site-with-worker-carrying-lumber_t20_7JOngv.jpg) no-repeat center/cover ;
+}
+.realestate-banner{
+  background:linear-gradient(to right,#00000086,#0000009c), url(./assets/realestate/13.png) no-repeat center/cover ;
+  height:600px;
+  background-attachment: fixed;
+}
+.realestate-cities .image-sec {
+  position: relative;
+}
+
+.realestate-cities .image-sec::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: #08060647; /* semi-transparent overlay */
+  top: 0;
+  left: 0;
+  z-index: 1;
+}
+
+.realestate-cities .image-sec img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  position: relative;
+  z-index: 0;
+}
+/* realestate-services */
+.realestate-services .children {
+  position: relative; /* ✅ this gives a reference point for ::after */
+  overflow: hidden;   /* ensures overlay doesn’t spill outside rounded corners */
+}
+
+.realestate-services{
+background: linear-gradient(110deg, #62e6a5 50%, #9ae7ba 50%, #9ae7ba 52%, #d1f5de 52%, #d1f5de 0);
+}
+.realestate-services .children::after {
+  content: "";
+  position: absolute;
+  height: 10px;
+  width: 100%;
+  bottom: 0;
+  left: -500px;
+  background: #0e129be3; /* semi-transparent overlay */
+  z-index: 1;
+  opacity: 0; /* start invisible */
+  transition: opacity 0.3s ease;
+}
+
+.realestate-services .children:hover::after {
+  opacity: 1; /* show overlay on hover */
+  left: 0;    /* slide in from left */
+  transition: all 1s ease;
+}
+
+/* make content sit above overlay */
+.realestate-services .children * {
+  position: relative;
+  z-index: 2;
+}
+.dream-house-section{
+  background: linear-gradient(200deg, #62e6a5 50%, #9ae7ba 50%, #9ae7ba 55%, #d1f5de 52%, #d1f5de 10%);
+}
+/* construction-banner */
+.construction-banner{
+    height: 55vh;
+    background:linear-gradient(to right,#00000093,#00000090), url(./assets/construction/constru-banner.png) no-repeat;
+    background-size: cover;
+    background-position-x:center;
+}
+.let-intro .image>div{
+  position: relative;
+}
+.let-intro .image>div::before{
+    content: "";
+    position: absolute;
+    inset: 0;
+    z-index: 10px;
+    transform: scale(0);
+    
+}
+.let-intro .image:hover div::before{
+    background: #f9e931a7;
+    transform: scale(1);
+    transition: all 1s;
+}
+.construction-contact-us{
+   background: url(./assets/construction/great-construct-team-bg.jpg);
+}
+.construction-contact-page-section{
+  background: url(./assets//contact//contact-banner.png) no-repeat center;
+  background-size:contain;
+}

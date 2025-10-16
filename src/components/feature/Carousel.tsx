@@ -1,10 +1,9 @@
 import { useState, useEffect } from "react";
-
+import carousel1 from "../../assets/banner/1.png";
+import carousel2 from "../../assets/banner/2.png";
+import carousel3 from "../../assets/banner/3.png";
 const images = [
-  "https://img.freepik.com/free-photo/panorama-shot-canal-lake-pukaki-twisel-surrounded-with-mountains_181624-45343.jpg?semt=ais_hybrid&w=1200&q=80",
-  "https://img.freepik.com/free-photo/beautiful-mountain-landscape_181624-31969.jpg?semt=ais_hybrid&w=1200&q=80",
-  "https://img.freepik.com/free-photo/lake-with-beautiful-mountain-view_181624-46439.jpg?semt=ais_hybrid&w=1200&q=80",
-  "https://img.freepik.com/free-photo/snowy-mountains-blue-sky_181624-27789.jpg?semt=ais_hybrid&w=1200&q=80",
+   carousel1,carousel2,carousel3
 ];
 
 const Carousel = () => {

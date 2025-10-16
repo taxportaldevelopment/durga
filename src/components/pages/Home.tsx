@@ -1,4 +1,3 @@
-import Header from '../layout/Header'
 import Carousel from '../feature/Carousel';
 import CarouselSlider from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
@@ -7,8 +6,11 @@ import img1 from '../../assets/home/img-1.png';
 import img2 from '../../assets/home/img-2.jpg';
 import work1 from '../../assets/home/work-1.png';
 import work2 from '../../assets/home/truck-img.gif';
+import worker1 from "../../assets/home/worker.png";
 import { HomeButton } from '../../buttons/HomeButton';
-
+import ViewImage from '../../imagesSection/ViewImage';
+// icons section
+import { GiDrill } from "react-icons/gi";
 const Home = () => {
 
 const responsive = {
@@ -39,9 +41,6 @@ const responsive = {
 
   return (
     <div>
-        {/* header start */}
-           <Header/>
-        {/* header end */}
         {/* carousel start */}
               <Carousel/>
         {/* carousel end */}
@@ -91,14 +90,14 @@ const responsive = {
             </div>
          </div>
          {/* our projects */}
-         <div className="projects">
+         <div className="projects text-wh">
             <h1 className="text-2xl font-bold text-center my-4 antonio p-10 text-yellow-200">Our Projects</h1>
             <div className='container mx-auto p-4 flex flex-col lg:flex-row gap-4 lg:px-28 py-10 some-facts'>
-                 <div className="w-1/2">
-                     <h1 className='text-2xl font-bold antonio'>Transforming The Ideas And Visions <br /> For <span className='text-yellow-300'>Industries!</span></h1>
+                 <div className="w-full lg:w-1/2">
+                     <h1 className='text-2xl font-bold antonio text-white'>Transforming The Ideas And Visions <br /> For <span className='text-yellow-300'>Industries!</span></h1>
                  </div>
-                 <div className="w-1/2">
-                   <p className='text-lg'>Construction is a general term meaning the art and science to form objects systems organizations.</p> 
+                 <div className="w-full lg:w-1/2">
+                   <p className='text-lg text-white'>Construction is a general term meaning the art and science to form objects systems organizations.</p> 
                    <div className='py-10'>
                        <button
   className="relative flex items-center px-6 py-3 overflow-hidden font-medium transition-all bg-indigo-500 rounded-md group"
@@ -131,13 +130,13 @@ const responsive = {
             </div>
             {/* Some Facts */}
            <div className='px-4 lg:px-28 flex flex-col lg:flex-row gap-4 py-10 bg-white '>
-               <div className="w-1/2">
+               <div className="lg:w-1/2 w-full">
             <h1 className='text-2xl font-bold  my-4 antonio'>Some Facts</h1>
             <h1 className=' text-3xl uppercase antonio py-2'>
                 Delivering The Most Innovation <span className='text-yellow-300'>Goals.</span>
             </h1>
                </div>
-               <div className="w-1/2">
+               <div className="lg:w-1/2 w-full">
                  {/* grid use 4 columns */}
                     <div className='grid grid-cols-2 md:grid-cols-4 gap-4 py-10'>
                         <div className='text-center'>
@@ -159,45 +158,46 @@ const responsive = {
                     </div>
                </div>
            </div>
-            <div className='container mx-auto px-32 py-10'>
-                <CarouselSlider
-                    responsive={responsive}
-                    showDots={true}
-                    infinite={true}
-                    autoPlay={true}
-                    autoPlaySpeed={3000}
-                    containerClass="carousel-container"
-                    itemClass="carousel-item-padding-40-px"
-                    arrows={false}
-                    renderButtonGroupOutside={true}
-                >
-                    {images.map((image, idx) => (
-                        <div key={idx} className="flex flex-col items-center bg-white rounded-lg shadow-md overflow-hidden mx-2">
-                            <img
-                                src={image.src}
-                                alt={image.title}
-                                className="w-full h-40 object-cover sm:h-60"
-                            />
-                            <div className="p-4 text-center">
-                                <h2 className="text-base sm:text-xl font-semibold mb-2 py-1">{image.title}</h2>
-                                <p className="text-gray-600 text-xs sm:text-sm py-1">{image.description}</p>
-                            </div>
-                        </div>
-                    ))}
-                </CarouselSlider>
+
+            <div className='container mx-auto px-4 sm:px-8 lg:px-32 py-10'>
+              <CarouselSlider
+                responsive={responsive}
+                showDots={true}
+                infinite={true}
+                autoPlay={true}
+                autoPlaySpeed={3000}
+                containerClass="carousel-container"
+                itemClass="carousel-item-padding-40-px"
+                arrows={false}
+                renderButtonGroupOutside={true}
+              >
+                {images.map((image, idx) => (
+                  <div key={idx} className="flex flex-col items-center bg-white rounded-lg shadow-md overflow-hidden mx-1 sm:mx-2">
+                    <img
+                      src={image.src}
+                      alt={image.title}
+                      className="w-full h-32 sm:h-40 md:h-60 object-cover"
+                    />
+                    <div className="p-2 sm:p-4 text-center">
+                      <h2 className="text-sm sm:text-base md:text-xl font-semibold mb-1 sm:mb-2 py-1">{image.title}</h2>
+                      <p className="text-gray-600 text-xs sm:text-sm py-5">{image.description}</p>
+                    </div>
+                  </div>
+                ))}
+              </CarouselSlider>
             </div>
          </div>
                      {/* expert worker */}
-            <div className="expert-worker ">
+            <div className="expert-workers ">
                   {/* left side content and right site image*/}
                     <div className='container mx-auto p-4 flex flex-col lg:flex-row gap-4 lg:px-28 py-10'>
-                        <div className="w-1/2">
+                        <div className="w-full lg:w-1/2">
                             <h1 className='text-2xl font-bold antonio'>Meet Our Expert Workers</h1>
                             <p className='text-lg py-4'>Construction is a general term meaning the art and science to form objects systems organizations, and comes from Latin construction and Old French construction. To construct is the verb: the act of building, and the noun is construction.</p>
                             <p className='text-lg py-4'>Construction is a general term meaning the art and science to form objects systems organizations, and comes from Latin construction and Old French construction. To construct is the verb: the act of building, and the noun is construction.</p>
                             <HomeButton/>
                         </div>
-                        <div className="w-1/2">
+                        <div className="w-full lg:w-1/2">
                             <img src={work1} alt="" className='w-full h-auto'/>
                         </div>
                     </div>
@@ -206,10 +206,10 @@ const responsive = {
             <div className="expert-worker ">
                   {/* left side content and right site image*/}
                     <div className='container mx-auto p-4 flex flex-col lg:flex-row gap-4 lg:px-28 py-10'>
-                        <div className="w-1/2">
-                            <img src={work2} alt="" className='w-full h-auto'/>
+                        <div className="w-full lg:w-1/2">
+                            <img src={work2} alt="" className='w-full h-auto rounded-r-xl'/>
                         </div>
-                        <div className="w-1/2">
+                        <div className="w-full lg:w-1/2">
                             <h1 className='text-2xl font-bold antonio'>Meet Our Expert Workers</h1>
                             <p className='text-lg py-4'>Construction is a general term meaning the art and science to form objects systems organizations, and comes from Latin construction and Old French construction. To construct is the verb: the act of building, and the noun is construction.</p>
                             <p className='text-lg py-4'>Construction is a general term meaning the art and science to form objects systems organizations, and comes from Latin construction and Old French construction. To construct is the verb: the act of building, and the noun is construction.</p>
@@ -217,7 +217,69 @@ const responsive = {
                     </div>
             {/* left side content and right site image*/}
             </div>
-
+          {/* gallery start */}
+           
+            <div className="gallery py-5">
+                <h1 className="text-3xl font-bold text-center my-4 antonio p-10 text-yellow-200">Gallery</h1>
+                <ViewImage/>
+            </div>
+          {/* gallery end */}
+          {/* WHAT WE OFFER START */}
+          <div className="what-we-offer py-5 px-1 lg:p-10">
+              <h1 className="text-3xl font-bold text-center my-4 antonio p-10 text-yellow-200">What We Offer</h1>
+              <p className="text-lg text-center py-2">We provide a wide range of construction services to meet your needs.</p>
+         
+                <div className='flex'>
+                    <div className="w-full lg:w-1/1 lg:p-2">
+                         {/* i want grid system use two row and tow column */}
+                          <div className='grid grid-cols-1 sm:grid-cols-2 gap-4 py-10'>
+                            <div className='flex gap-4 p-4 items-center'>
+                              <div className="icon flex items-center justify-center border rounded-full bg-yellow-300 text-white w-16 h-16 min-w-[4rem] min-h-[4rem]">
+                                <GiDrill className='text-3xl sm:text-5xl p-1' />
+                              </div>
+                              <div className="details flex-1">
+                                <h1 className='text-lg font-bold antonio'>Residential Construction</h1>
+                                <p className='text-md'>We provide a wide range of construction services to meet your needs.</p>
+                              </div>
+                            </div>
+                            <div className='flex gap-4 p-4 items-center'>
+                              <div className="icon flex items-center justify-center border rounded-full bg-yellow-300 text-white w-16 h-16 min-w-[4rem] min-h-[4rem]">
+                                <GiDrill className='text-3xl sm:text-5xl p-1' />
+                              </div>
+                              <div className="details flex-1">
+                                <h1 className='text-lg font-bold antonio'>Commercial Construction</h1>
+                                <p className='text-md'>We provide a wide range of construction services to meet your needs.</p>
+                              </div>
+                            </div>
+                            <div className='flex gap-4 p-4 items-center'>
+                              <div className="icon flex items-center justify-center border rounded-full bg-yellow-300 text-white w-16 h-16 min-w-[4rem] min-h-[4rem]">
+                                <GiDrill className='text-3xl sm:text-5xl p-1' />
+                              </div>
+                              <div className="details flex-1">
+                                <h1 className='text-lg font-bold antonio'>Residential Construction</h1>
+                                <p className='text-md'>We provide a wide range of construction services to meet your needs.</p>
+                              </div>
+                            </div>
+                            <div className='flex gap-4 p-4 items-center'>
+                              <div className="icon flex items-center justify-center border rounded-full bg-yellow-300 text-white w-16 h-16 min-w-[4rem] min-h-[4rem]">
+                                <GiDrill className='text-3xl sm:text-5xl p-1' />
+                              </div>
+                              <div className="details flex-1">
+                                <h1 className='text-lg font-bold antonio'>Commercial Construction</h1>
+                                <p className='text-md'>We provide a wide range of construction services to meet your needs.</p>
+                              </div>
+                            </div>
+                          </div>
+                    </div>
+                    <div className='w-full lg:w-1/2 relative hidden lg:block'>
+                        <img src={worker1} alt="" className=' h-auto'/>
+                        <div className="styles h-20 bg-amber-400 rounded-ss-4xl rounded-br-4xl absolute bottom-0 left-0 right-0 -rotate-4">
+                             <h1 className='text-lg font-bold antonio flex justify-center items-center'>Our Team</h1>
+                        </div>
+                    </div>
+                </div>
+          </div>
+          {/* WHAT WE OFFER END */}
     </div>
   )
 }
