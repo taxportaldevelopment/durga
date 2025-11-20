@@ -1,5 +1,9 @@
+import { useState } from "react"
 
 const Footer = () => {
+
+   const [getdate,setGetDate] = useState(new Date());
+
   return (
     <div>
         {/* split the three columns with grid ssystem */}
@@ -20,7 +24,7 @@ const Footer = () => {
             </div>
         </div>
         <div className='bg-gray-800 text-center text-gray-400 p-4'>
-            <p>&copy; 2025 Your Company. All rights reserved.</p>
+            <p>&copy; {getdate.getFullYear()} Your Company. All rights reserved.</p>
         </div>
     </div>
   )

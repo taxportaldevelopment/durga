@@ -146,7 +146,7 @@ const Contact: React.FC = () => {
         </form>
       </section>
          <div className="google-map p-6 lg:px25">
-             <iframe className="w-full" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3518.2488544351672!2d80.21514157454679!3d12.985180914581443!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a525d894baf0e37%3A0x6bacaf51b994a5fc!2staxportal.in!5e1!3m2!1sen!2sin!4v1760597537197!5m2!1sen!2sin" width="600" height="450" style={{border:0}} allowFullScreen={true} loading="lazy" referrerPolicy="no-referrer-when-downgrade"></iframe>
+             <iframe className="w-full" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d5918.056878490286!2d80.13976194692891!3d12.939279782725942!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a525e555615b655%3A0x6d33f8d12e76bb07!2s40%2C%20Thirukural%20St%2C%20Anna%20Nagar%2C%20Hasthinapuram%2C%20Chromepet%2C%20Chennai%2C%20Tamil%20Nadu%20600064!5e1!3m2!1sen!2sin!4v1761997587301!5m2!1sen!2sin" width="600" height="450" style={{border:0}} allowFullScreen={true} loading="lazy" referrerPolicy="no-referrer-when-downgrade"></iframe>
          </div>
     </div>
     </div>

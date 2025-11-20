@@ -12,6 +12,7 @@ import { FaRecycle } from "react-icons/fa";
 import { RiCompasses2Fill } from "react-icons/ri";
 import { CiTrophy } from "react-icons/ci";
 import { PiPencilSimpleLine ,PiStrategy} from "react-icons/pi";
+import { Link } from "react-router-dom";
 const Construction = () => {
   return (
     <div>
@@ -40,7 +41,9 @@ const Construction = () => {
                                <div className="content p-2">
                                       <h1 className='py-4 text-2xl antonio'>Construction</h1>
                                       <div className='h-1 w-20 bg-amber-600'></div>
-                                      <p className='py-2'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora optio, cumque, iste suscipit atque ad amet repellendus repudiandae corrupti vel sint quidem quod cumque quidem mollitia illo est atque, dolorem dolor architecto!</p>
+                                      <p className='py-2'>
+                                        We specialize in residential, commercial, and industrial construction, delivering high-quality projects with modern designs and reliable workmanship.
+                                        </p>
                                </div>
                           </div>
                           <div className="layer">
@@ -52,7 +55,9 @@ const Construction = () => {
                                <div className="content p-2">
                                       <h1 className='py-4 text-2xl antonio'>Construction</h1>
                                       <div className='h-1 w-20 bg-amber-600'></div>
-                                      <p className='py-2'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora optio, cumque, iste suscipit atque ad amet repellendus repudiandae corrupti vel sint quidem quod cumque quidem mollitia illo est atque, dolorem dolor architecto!</p>
+                                      <p className='py-2'>
+                                        With a skilled team and a commitment to excellence, DD Associates ensures every project is completed on time and within budget.
+                                        </p>
                                </div>
                           </div>
                      </div>
@@ -60,7 +65,8 @@ const Construction = () => {
                  <div className="w-full p-3">
                      <main>
                           <h1 className='text-3xl py-2 font-semibold'>Welcome to ConstructPress</h1>
-                          <p className='py-2'>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quasi, doloremque sed! Asperiores perspiciatis, eum officiis inventore voluptatibus nam beatae aperiam?</p>
+                          <p className='py-2'>
+                              DD Associates is a trusted construction company based in Chennai, Tamil Nadu, dedicated to building strong, safe, and beautiful spaces.</p>
                           <ul className='opacity-65'>
                                <li className='flex items-center py-2'><FaRegArrowAltCircleRight className='me-2' /> Interior design Package</li>
                                <li className='flex items-center py-2'><FaRegArrowAltCircleRight className='me-2' /> Reparing of Residentail Roof</li>
@@ -94,10 +100,9 @@ const Construction = () => {
                      <div className="flex p-2 gap-4">
                           <div className="w-full">
                              <div>
-                                 <p className='py-5 opacity-65'>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium
-dolore mque laudantium, totam rem aperiam, eaque ipsa quae ab illo invent
-ore veritatis et quasi architecto beatae vitae dict eaque ipsa quae ab illo
-inventore veritatis et quasi architecto.</p>
+                                 <p className='py-5 opacity-65'>At DD Associates, we provide complete building construction services designed to meet your vision and budget.
+From planning and design to execution and finishing, we handle every step with care, quality, and precision.
+Our team of skilled engineers, architects, and workers ensures that each building is strong, safe, and built to last.</p>
                              </div>
                              <div className="lg:flex mt-3 gap-2">
                                  <div className="w-full lg:w-1/2">
@@ -132,9 +137,14 @@ inventore veritatis et quasi architecto.</p>
                    <div className="w-full lg:w-1/2">
                          <div className="p-2 lg:px-10">
                                <h1 className='py-2 text-3xl'>Checkout our video for featured work</h1>
-                               <p className='py-2'>Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia conseq uuntur magnirt dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quis quam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit. Neque porro quis quam qui dolorem ipsu quiat dolor sit amet, consectetur, adipisci velit.</p>
-                               <div className='py-4'>
-                                              <button
+                               <p className='py-2'>
+Take a closer look at our featured construction projects through this video showcase.
+At DD Associates, every project tells a story of quality, creativity, and craftsmanship.
+From elegant homes to modern commercial spaces, our work reflects dedication and attention to detail.
+Watch the video to see how we transform ideas into beautiful, lasting structures that inspire trust and pride.                                   </p>
+     <div className='py-4'>
+          <Link to={"/contact"}>
+             <button
   className="relative flex items-center px-6 py-3 overflow-hidden font-medium transition-all bg-indigo-500 rounded-md group"
 >
   <span
@@ -157,7 +167,9 @@ inventore veritatis et quasi architecto.</p>
   <span
     className="relative w-full text-left text-white transition-colors duration-200 ease-in-out group-hover:text-white"
     >CONTACT US</span >
-                       </button>  
+              </button> 
+          </Link>
+
                                </div>
                          </div>
                    </div>
@@ -176,68 +188,76 @@ inventore veritatis et quasi architecto.</p>
              </div>
          </div>
          {/* CERTIFICATION */}
-         <div className="container construction-certification p-4 py-7 lg:px-30">
+         <div className="container construction-certification p-2 lg:p-4 py-7 lg:px-30">
                <h1 className='text-center font-semibold text-2xl antonio'>CERTIFICATION</h1>
                <p className='text-center py-5 font-sans'>Embedded in our culture of hard work, honesty, and getting the well done job,</p>
-              <div className="grid grid-cols-2  lg:grid-cols-3 p-5">
+              <div className="grid grid-cols-2  lg:grid-cols-3 p-">
 
-                   <div className='flex justify-center p-3 border-r border-b'>
+                   <div className='flex justify-center p-1 lg:p-3 border-r border-b'>
                        <div>
                              <div className="icons flex justify-center">
                                 <div>
                                          <div className='flex justify-center'>
                                               <BsTools className='text-4xl text-yellow-300' />
                                          </div>
-                                <h2 className='py-5 font-extralight text-2xl'>SAFETY</h2>
+                                <h2 className='lg:py-5 py-1 font-extralight text-sm lg:text-2xl'>SAFETY</h2>
                                 </div>
                          </div>
-                         <p className='font-extralight text-center'>pork sirloi loine beefb andoe uillen uillen capicola swine a kevin mignon tritip picolakevin mignon tritip picola kevinsdertand filet mignon</p>
+                         <p className='font-extralight text-center'>We follow strict safety standards and guidelines to protect our workers, clients, and the environment.
+Our team is trained in proper safety practices, and we ensure that all equipment and materials meet high-quality safety requirements.</p>
 
                        </div>
                    </div>
-                   <div className='flex justify-center p-3 border-b'>
+                   <div className='flex justify-center p-1 lg:p-3 border-b'>
                        <div>
                              <div className="icons flex justify-center">
                                 <div>
                                          <div className='flex justify-center'>
                                               <FaRecycle className='text-4xl text-yellow-300' />
                                          </div>
-                                <h2 className='py-5 font-extralight text-2xl'>COMMUNITY</h2>
+                                <h2 className='py-1 lg:py-5 font-extralight text-sm lg:text-2xl'>COMMUNITY</h2>
                                 </div>
                          </div>
-                         <p className='font-extralight'>pork sirloi loine beefb andoe uillen uillen capicola swine a kevin mignon tritip picolakevin mignon tritip picola kevinsdertand filet mignon</p>
+                         <p className='font-extralight'>
+                              We are proud to contribute to the growth and development of the neighborhoods where we work.
+Our projects are designed to create safe, comfortable, and sustainable spaces that bring people together.
+                              </p>
 
                        </div>
                    </div>
-                   <div className='flex justify-center p-3 border-l border-b'>
+                   <div className='flex justify-center p-1 lg:p-3 border-l border-b'>
                        <div>
                              <div className="icons flex justify-center">
                                 <div>
                                          <div className='flex justify-center'>
                                               <RiCompasses2Fill className='text-4xl text-yellow-300' />
                                          </div>
-                                <h2 className='py-5 font-extralight text-2xl'>SUSTAINABILITY</h2>
+                                <h2 className='py-1 lg:py-5 font-extralight text-sm lg:text-2xl'>SUSTAINABILITY</h2>
                                 </div>
                          </div>
-                         <p className='font-extralight'>pork sirloi loine beefb andoe uillen uillen capicola swine a kevin mignon tritip picolakevin mignon tritip picola kevinsdertand filet mignon</p>
+                         <p className='font-extralight'>
+                              Our goal is to create buildings that are not only beautiful and durable but also responsible toward nature.
+We carefully plan every project to minimize waste, conserve resources, and promote green living environments.
+                         </p>
 
                        </div>
                    </div>
-                   <div className='flex justify-center p-3 border-r'>
+                   <div className='flex justify-center p-1 lg:p-3 border-r'>
                        <div>
                              <div className="icons flex justify-center">
                                 <div>
                                          <div className='flex justify-center'>
                                               <CiTrophy className='text-4xl text-yellow-300' />
                                          </div>
-                                <h2 className='py-5 font-extralight text-2xl'>BEST QUALITY</h2>
+                                <h2 className='py-1 lg:py-5 font-extralight text-sm lg:text-2xl'>BEST QUALITY</h2>
                                 </div>
                          </div>
-                         <p className='font-extralight text-center'>pork sirloi loine beefb andoe uillen uillen capicola swine a kevin mignon tritip picolakevin mignon tritip picola kevinsdertand filet mignon</p>
+                         <p className='font-extralight text-center'>From the materials we choose to the workmanship we deliver, every step reflects our commitment to excellence.
+We follow strict quality control standards to ensure every project meets the highest level of safety, strength, and design.</p>
 
                        </div>
                    </div>
-                   <div className='flex justify-center p-3'>
+                   <div className='flex justify-center p-1 lg:p-3'>
                        <div>
                              <div className="icons flex justify-center">
                                 <div>
@@ -247,11 +267,12 @@ inventore veritatis et quasi architecto.</p>
                                 <h2 className='py-5 font-extralight text-2xl'>INTEGRITY</h2>
                                 </div>
                          </div>
-                         <p className='font-extralight'>pork sirloi loine beefb andoe uillen uillen capicola swine a kevin mignon tritip picolakevin mignon tritip picola kevinsdertand filet mignon</p>
+                         <p className='font-extralight'>We believe in conducting every project with honesty, transparency, and fairness.
+From planning to completion, we maintain open communication with our clients and partners to ensure trust at every stage.</p>
 
                        </div>
                    </div>
-                   <div className='flex justify-center p-3 border-l'>
+                   <div className='flex justify-center p-1 lg:p-3 border-l sm:border-t'>
                        <div>
                              <div className="icons flex justify-center">
                                 <div>

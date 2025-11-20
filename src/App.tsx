@@ -7,8 +7,31 @@ import Header from "./components/layout/Header";
 import RealEstate from "./components/pages/RealEstate";
 import Construction from "./components/pages/Construction";
 import Contact from "./components/pages/Contact";
-
+import BounceImagePreview from "./BounceImagePreview";
+import { useEffect, useState } from "react";
+import { FaArrowUp } from "react-icons/fa6";
 function App() {
+
+
+const [showArrow, setShowArrow] = useState(false);
+
+const handleScroll = () => {
+      if (window.scrollY > 300) {
+        setShowArrow(true);
+      } else {
+        setShowArrow(false);
+      }
+    };
+  
+    const scrollToTop = () => {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    };
+    useEffect(()=>{
+
+      window.addEventListener('scroll', handleScroll);
+      return () => window.removeEventListener('scroll', handleScroll);
+    },[])
+
   return (
     <div className="relative">
       {/* Header */}
@@ -29,6 +52,21 @@ function App() {
           className="custom-class"
         />
       </div> */}
+
+       <div className="image-bounce-section">
+            <BounceImagePreview 
+            src="https://media.istockphoto.com/id/1409298953/photo/real-estate-agents-shake-hands-after-the-signing-of-the-contract-agreement-is-complete.jpg?s=612x612&w=0&k=20&c=SFybbpGMB0wIoI0tJotFqptzAYK_mICVITNdQIXqnyc=" 
+            size={120}/>
+       </div>
+      {/* TOP SCROLL ARROW */}
+                      {showArrow && (
+        <button
+          onClick={scrollToTop}
+          className="fixed bottom-5 right-5 bg-blue-500 mt-2 p-2 rounded-full shadow-lg hover:bg-blue-700 transition-all duration-300"
+        >
+          <FaArrowUp size={20} />
+        </button>
+      )}
     </div>
   );
 }

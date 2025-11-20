@@ -1,7 +1,7 @@
 /* From Uiverse.io by mobinkakei */ 
 .btn {
-  --color1: #1a8516;
-  --color2: #236b19;
+  --color1: #CA6139;
+  --color2: #CA6139;
   perspective: 1000px;
   padding: 1em 1em;
   background: linear-gradient(var(--color1), var(--color2));

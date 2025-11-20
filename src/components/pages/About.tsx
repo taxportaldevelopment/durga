@@ -6,10 +6,12 @@ import icons1 from "../../assets/about/icons/hook.png";
 import icons2 from "../../assets/about/icons/worker.png";
 import icons3 from "../../assets/about/icons/process.png";
 
+
 const progressData = [
     { label: "Engineering", value: 90 },
     { label: "Construction", value: 75 },
     { label: "Renovations", value: 75 },
+    { label: "Real Estate", value: 85 },
 ];
 
 const AnimatedProgressBar: React.FC<{ value: number }> = ({ value }) => {
@@ -44,6 +46,7 @@ const AnimatedProgressBar: React.FC<{ value: number }> = ({ value }) => {
 const About = () => {
     return (
         <div>
+
             <div className="about-home-banner flex items-center">
                 <div className="lg:ps-20 p-10">
                     <h1 className="text-white text-4xl font-bold pt-36 py-2 product-font">About Us</h1>
@@ -70,10 +73,10 @@ const About = () => {
                         </h2>
                         <h1 className="font-bold text-3xl py-2">We're ready to share our experience</h1>
                         <p className="py-2">
-                            There are many variations of passages of Lorem Ipsum available,
-                            but the majority have suffered alteration in some form, by injected
-                            humour, or randomised words which don’t look even slightly believable.
-                            Lorem Ipsum is simply dummy text of the printing and typesetting.
+                            At <strong>DD Associates</strong>, we bring years of rich experience in the construction and real estate industry, delivering projects that stand as a mark of quality and trust. Over the years, we have successfully completed numerous residential, commercial, and infrastructure developments across Chennai and surrounding areas. Each project reflects our commitment to precision, planning, and professionalism.
+                        </p>
+                        <p>
+                            Our team of skilled architects, engineers, and project managers work with a shared goal — to deliver every project on time, within budget, and beyond expectations. We believe that strong client relationships are the foundation of our success.
                         </p>
                         <h1 className="font-bold text-3xl py-2">John Smith</h1>
                         <img
@@ -126,13 +129,23 @@ const About = () => {
             <div className="containerr p-4 lg:p-10 flex flex-col lg:flex-row">
                 <div className="w-full lg:w-1/2 flex justify-center items-center mb-6 lg:mb-0">
                     <div>
-                        <h2 className="py-2 text-xl lg:text-lg antonio opacity-70">Our Services</h2>
-                        <h1 className="text-2xl lg:text-3xl uppercase">We can design and build your dream home</h1>
+                        <h2 className="py-2 text-xl lg:text-lg antonio opacity-70 antonio first-letter:text-2xl text-blue-900">Our Services</h2>
+                        <h1 className="text-2xl lg:text-3xl uppercase font-sans">We can design and build your dream home</h1>
                         <span>
-                            <p className="py-3 text-base lg:text-lg">
-                                There are many variations of passages of Lorem Ipsum available,
-                                but the majority have suffered alteration in some form, by injected
-                                humour, or randomised words which don’t look even slightly believable.
+                            <p className="py-3 text-base lg:text-lg opacity-70">
+ <b>DD Associates</b> is a trusted name in the field of <i><strong>construction and real estate development</strong></i> based in Chennai, India.
+With years of hands-on experience, we specialize in delivering residential, commercial, and industrial projects with precision and excellence.
+Our mission is to build modern spaces that combine quality, design, and sustainability for long-term value.
+At DD Associates, we believe every project is more than just construction — it’s a vision turned into reality.
+We use high-quality materials and the latest technologies to ensure durable and safe structures.
+Our team of skilled engineers, architects, and craftsmen work together to achieve exceptional results on every site.
+Customer satisfaction is at the heart of our business, and we pride ourselves on on-time delivery and transparent communication.
+We take great care to understand our clients’ needs and bring their ideas to life with customized solutions.
+From site planning to final execution, DD Associates handles every stage with professionalism and attention to detail.
+Our portfolio includes a wide range of housing developments, office buildings, and real estate projects across Chennai.
+We are committed to building not just structures, but long-lasting relationships built on trust and quality service.
+Sustainability is a key part of our approach, ensuring our projects respect the environment and future generations.
+With a forward-thinking mindset, we continuously adopt new construction methods and eco-friendly designs.
                             </p>
                         </span>
                         {/* progress bar */}

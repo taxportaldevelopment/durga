@@ -71,8 +71,8 @@ const Carousel = () => {
     </div>
       {/* company name and details */}
       <div className="absolute top-52 left-1/2 -translate-x-1/2 text-center text-white z-20">
-        <h2 className=" font-bold text-6xl">Company Name</h2>
-        <p className="text-lg py-2">Company details go here</p>
+        {/* <h2 className=" font-bold text-6xl">Company Name</h2>
+        <p className="text-lg py-2">Company details go here</p> */}
       </div>
     </div>
   );
