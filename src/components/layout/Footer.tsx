@@ -2,7 +2,8 @@ import { useState } from "react"
 
 const Footer = () => {
 
-   const [getdate,setGetDate] = useState(new Date());
+   // eslint-disable-next-line @typescript-eslint/no-unused-vars
+   const getdate = new Date();
 
   return (
     <div>
@@ -13,7 +14,7 @@ const Footer = () => {
                 <p className='text-gray-400'>We are a leading company in providing top-notch services and solutions to our clients. Our mission is to deliver excellence and innovation in every project we undertake.</p>
             </div>
             <div>
-                <h1 className='text-2xl font-bold antonio mb-4'>Contact Us</h1>
+                <h1 className='text-2xl font-bold antonio mb-4'>Contact Us</h1> 
                 <p className='text-gray-400'>123 Main Street, City, Country</p>
                 <p className='text-gray-400'>Email: info@example.com</p>
             </div>
