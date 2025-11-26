@@ -1,8 +1,6 @@
-import { useState } from "react"
 
 const Footer = () => {
 
-   // eslint-disable-next-line @typescript-eslint/no-unused-vars
    const getdate = new Date();
 
   return (
