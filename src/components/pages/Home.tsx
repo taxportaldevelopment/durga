@@ -9,7 +9,7 @@ import worker1 from "../../assets/home/worker.png";
 import { HomeButton } from "../../buttons/HomeButton";
 import ViewImage from "../../imagesSection/ViewImage";
 // icons section
-import { useEffect, useRef, useState } from "react";
+// import { useEffect, useRef, useState,} from "react";
 import { AiFillBuild } from "react-icons/ai";
 // service list images
 import ser1 from "../../assets/services-img/img-1.png";
@@ -30,66 +30,64 @@ import scroll4 from "../../assets/scroller/img-4.jpg";
 import scroll5 from "../../assets/scroller/img-5.jpg";
 import scroll6 from "../../assets/scroller/img-6.jpg";
 // style apply
-const useScrollReveal = (options = { threshold: 0.2, rootMargin: "0px" }) => {
-  const ref = useRef<HTMLElement>(null);
-  const [isRevealed, setIsRevealed] = useState(false);
+// const useScrollReveal = (options = { threshold: 0.2, rootMargin: "0px" }) => {
+//   const ref = useRef<HTMLElement>(null);
+//   const [isRevealed, setIsRevealed] = useState(false);
 
-  useEffect(() => {
-    const element = ref.current;
-    if (!element) return;
+//   useEffect(() => {
+//     const element = ref.current;
+//     if (!element) return;
 
-    const observer = new IntersectionObserver((entries, observer) => {
-      entries.forEach((entry) => {
-        if (entry.isIntersecting) {
-          setIsRevealed(true);
-          // Stop observing once it's revealed
-          observer.unobserve(element);
-        }
-      });
-    }, options);
+//     const observer = new IntersectionObserver((entries, observer) => {
+//       entries.forEach((entry) => {
+//         if (entry.isIntersecting) {
+//           setIsRevealed(true);
+//           // Stop observing once it's revealed
+//           observer.unobserve(element);
+//         }
+//       });
+//     }, options);
 
-    observer.observe(element);
+//     observer.observe(element);
 
-    // Cleanup function
-    return () => {
-      if (element) {
-        observer.unobserve(element);
-      }
-    };
-  }, [options]);
+//     // Cleanup function
+//     return () => {
+//       if (element) {
+//         observer.unobserve(element);
+//       }
+//     };
+//   }, [options]);
 
-  return { ref, isRevealed };
-};
+//   return { ref, isRevealed };
+// };
 
 /**
  * ScrollReveal Component: Wraps content and applies the animation when scrolled into view.
  */
-import { ReactNode } from "react";
-import ImageTrail from "../../BounceImagePreview";
 
-interface ScrollRevealProps {
-  children: ReactNode;
-  className?: string;
-}
+// interface ScrollRevealProps {
+//   children: ReactNode;
+//   className?: string;
+// }
 
-const ScrollReveal = ({ children, className = "" }: ScrollRevealProps) => {
-  const { ref, isRevealed } = useScrollReveal({
-    threshold: 0.2,
-    rootMargin: "",
-  });
+// const ScrollReveal = ({ children, className = "" }: ScrollRevealProps) => {
+//   const { ref, isRevealed } = useScrollReveal({
+//     threshold: 0.2,
+//     rootMargin: "",
+//   });
 
-  const baseClasses = "scroll-reveal";
-  const revealedClass = isRevealed ? "revealed" : "";
+//   const baseClasses = "scroll-reveal";
+//   const revealedClass = isRevealed ? "revealed" : "";
 
-  return (
-    <section
-      ref={ref}
-      className={`${baseClasses} ${revealedClass} ${className}`}
-    >
-      {children}
-    </section>
-  );
-};
+//   return (
+//     <section
+//       ref={ref}
+//       className={`${baseClasses} ${revealedClass} ${className}`}
+//     >
+//       {children}
+//     </section>
+//   );
+// };
 
 const Home = () => {
   const responsive = {

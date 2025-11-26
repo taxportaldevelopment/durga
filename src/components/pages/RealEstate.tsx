@@ -1,5 +1,5 @@
 import logo from "../../assets/logo.png";
-import img1 from "../../assets/realestate/2.png";
+// import img1 from "../../assets/realestate/2.png";
 import img2 from "../../assets/realestate/21.png";
 import img3 from "../../assets/realestate/22.png";
 // import img4 from "../../assets/realestate/23.png";
